@@ -1,4 +1,7 @@
-import React,{Component} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import map from 'lodash/map';
+// import axios from 'axios';
 
 class SignUpForm extends React.Component {
   constructor(props){
@@ -20,7 +23,7 @@ class SignUpForm extends React.Component {
 
   onSubmit(e){
     e.preventDefault();
-    console.log(this.state);
+    this.props.userSignUpRequest(this.state);
 
   }
     render() {
@@ -89,5 +92,9 @@ class SignUpForm extends React.Component {
         );
     }
 }
+
+  SignUpForm.propTypes = {
+    userSignUpRequest: PropTypes.func.isRequired
+  }
 
 export default SignUpForm;
