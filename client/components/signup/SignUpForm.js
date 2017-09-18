@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import map from 'lodash/map';
+import Validate from "react-validate-form";
 import classnames from 'classnames';
 import {Field, reduxForm} from 'redux-form'
 import validateInput from '../../../server/shared/validations/signup'
@@ -20,14 +21,11 @@ class SignUpForm extends React.Component {
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
 
-    const firstname = value => value && /[a-fA-F]/i.test(value)
-
-    const email = value => value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)
-
+    const email = value => value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]$/i.test(value)
 
     const minLength = min => value => value && value.length > min
-        ? `Must be ${min} characters or less`
-        : undefined
+      ? `Must be ${min} characters or less`
+      : undefined
 
     const minLength8 = minLength(8)
 
@@ -98,9 +96,10 @@ class SignUpForm extends React.Component {
           <small className="form-text text-muted">An activation link will be sent to this email.</small>
         </div>
         <div className="text-left">
-          <small>By clicking Submit, I agree that I have read and accepted the
+          <small>By clicking Submit, I agree that I have read and accepted the <br/>
             <a href="#">
-              Terms and conditions</a>
+              Terms and conditions
+            </a>
           </small>
         </div>
         <div className="form-group mt-1">
