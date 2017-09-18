@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import SignUpForm from './SignUpForm';
 import {connect} from 'react-redux';
+
 import {userSignUpRequest} from '../../actions/signupActions';
 
 class SignUpPage extends React.Component {
@@ -14,7 +15,7 @@ class SignUpPage extends React.Component {
             <div className="card-header bg-primary text-white">
               <h4>Create your free account</h4>
             </div>
-            <div className="card-body">
+            <div className="card-body pl-4 pr-4 pt-2">
               <SignUpForm userSignUpRequest={userSignUpRequest}/>
             </div>
           </div>

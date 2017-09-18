@@ -26,18 +26,25 @@
   "dependencies": {
     "axios": "^0.12.0",
     "body-parser": "^1.18.1",
+    "bootstrap": "^4.0.0-alpha.6",
     "classnames": "^2.2.5",
     "express": "^4.15.4",
+    "jquery": "^3.2.1",
     "lodash": "^4.17.4",
+    "popper.js": "^1.12.5",
     "react": "^15.6.1",
+    "react-bootstrap-form": "^0.1.4-beta6",
     "react-classname-module": "^0.1.1",
     "react-classnames": "^0.1.2",
     "react-dom": "^15.6.1",
+    "react-popper": "^0.7.2",
     "react-redux": "^5.0.6",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",
+    "redux-form": "^7.0.4",
     "redux-thunk": "^2.2.0",
+    "tether": "^1.4.0",
     "validator": "^8.2.0"
   }
 }
